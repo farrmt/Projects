@@ -1,9 +1,9 @@
-baseurl = "https://farrmt.github.io/Projects/"
+baseurl = "https://farrmt.github.io/"
 publishDir = "docs"
 title = "Matthew Farr Projects"
 author = "farrmt"
 canonifyurls = true
-languagecode = "en"
+languagecode = "en-us"
 theme = "hugo-tanka"
 
 googleAnalytics = ""

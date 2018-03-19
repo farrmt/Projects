@@ -2,22 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Matthew Farr Projects</title>
-    <link>/Projects/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Matthew Farr Projects</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     
-	<atom:link href="/Projects/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>R</title>
-      <link>/Projects/categories/r/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/Projects/categories/r/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
