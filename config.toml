@@ -1,7 +1,7 @@
-baseurl = "/"
+baseurl = "https://farrmt.github.io/Projects/"
 publishDir = "docs"
-title = "Farrmt Projects"
-author = "Matthew Farr"
+title = "Matthew Farr Projects"
+author = "farrmt"
 canonifyurls = true
 languagecode = "en"
 theme = "hugo-tanka"
@@ -16,25 +16,13 @@ pygmentscodefences = true
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params]
-  sitename = "Farrmt Projects"
+  sitename = "Matthew Farr Projects"
 
 [[menu.main]]
     name = "Home"
-    url = "https://farrmt.github.io"
+    url = "https://farrmt.github.io/"
     weight = 1
 [[menu.main]]
     name = "GitHub"
     url = "https://github.com/farrmt"
     weight = 2
-[[menu.main]]
-    name = "LinkedIn"
-    url = "https://www.linkedin.com/in/road2stat"
-    weight = 3
-[[menu.main]]
-    name = "Twitter"
-    url = "https://twitter.com/road2stat"
-    weight = 4
-[[menu.main]]
-    name = "RSS"
-    url = "/index.xml"
-    weight = 5

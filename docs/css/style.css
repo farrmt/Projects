@@ -10,9 +10,9 @@
 }
 
 body {
-  font-family: "Source Serif Pro", Georgia, Times, "Times New Roman", serif;
-  font-size: 16px;
-  line-height: 160%;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 17px;
+  line-height: 28px;
   color: #333;
   max-width: 700px;
   margin: auto;
@@ -117,8 +117,9 @@ em,q,em,dfn {
 }
 
 .heading,.serif,h1,h2,h3 {
-  font-family: "Source Serif Pro", serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-weight: 600;
+  line-height: 120%;
 }
 
 strong {
@@ -298,7 +299,7 @@ ul li:before {
 }
 
 #not-found a {
-  font-family: "Source Serif Pro", serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 200px;
   text-decoration: none;
   display: inline-block;
@@ -371,26 +372,4 @@ ul li:before {
   .posts_listing li div{
     font-size: 12px;
   }
-}
-
-table {
-	border-collapse:collapse;
-	border-top:1px black solid;
-	border-bottom:1px black solid;
-	min-width:100%;
-}
-
-th, td {
-	padding:0.4em;
-}
-
-th { 
-	border-bottom:1px black solid;
-	font-weight:bold;
-}
-
-tr:nth-child(even) {background: #f7f7f7}
-
-caption {
-  font-weight:bold;
 }
