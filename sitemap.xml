@@ -3,17 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://farrmt.github.io/Projects/about/</loc>
+    <lastmod>2017-12-21T03:21:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://farrmt.github.io/Projects/posts/hello-hugo/</loc>
+    <lastmod>2014-09-01T12:19:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://farrmt.github.io/Projects/archives/</loc>
+  </url>
+  
+  <url>
+    <loc>https://farrmt.github.io/Projects/tags/blog/</loc>
+    <lastmod>2014-09-01T12:19:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://farrmt.github.io/Projects/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://farrmt.github.io/Projects/tags/hugo/</loc>
+    <lastmod>2014-09-01T12:19:03+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://farrmt.github.io/Projects/</loc>
+    <lastmod>2017-12-21T03:21:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://farrmt.github.io/Projects/posts/</loc>
+    <lastmod>2014-09-01T12:19:03+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://farrmt.github.io/Projects/tags/</loc>
+    <lastmod>2014-09-01T12:19:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
