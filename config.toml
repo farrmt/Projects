@@ -1,0 +1,8 @@
+baseURL = "https://farrmt.github.io/Projects/"
+languageCode = "en-us"
+title = "Matthew Farr Projects"
+theme = "hugo-theme-one"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[params]
+    navigation = ["archives.md", "about.md"]
