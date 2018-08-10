@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Matthew Farr Projects</title>
-    <link>https://farrmt.github.io/Projects/tags/</link>
+    <link>/Projects/tags/</link>
     <description>Recent content in Tags on Matthew Farr Projects</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Sep 2014 12:19:03 +0800</lastBuildDate>
     
-        <atom:link href="https://farrmt.github.io/Projects/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/Projects/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blog</title>
-      <link>https://farrmt.github.io/Projects/tags/blog/</link>
+      <link>/Projects/tags/blog/</link>
       <pubDate>Mon, 01 Sep 2014 12:19:03 +0800</pubDate>
       
-      <guid>https://farrmt.github.io/Projects/tags/blog/</guid>
+      <guid>/Projects/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://farrmt.github.io/Projects/tags/hugo/</link>
+      <link>/Projects/tags/hugo/</link>
       <pubDate>Mon, 01 Sep 2014 12:19:03 +0800</pubDate>
       
-      <guid>https://farrmt.github.io/Projects/tags/hugo/</guid>
+      <guid>/Projects/tags/hugo/</guid>
       <description></description>
     </item>
     
