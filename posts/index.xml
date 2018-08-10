@@ -65,17 +65,7 @@ examining the code in this example and through reading the Hugo &lt;a href=&#34;
     </item>
     
     <item>
-      <title>Saunders, S.P., _Farr, M.T._, Wright, A.D., Bahlai, C.A., Ribeiro, J.W., Rossman, S., Sussman, A.L., Arnold, T.W., &amp; Zipkin E.F. (In Review) Disentangling data discrepancies and deficiencies with integrated population models.</title>
-      <link>/Projects/posts/amwo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/Projects/posts/amwo/</guid>
-      <description>&lt;p&gt;The Zipkin lab is collaborating with &lt;a href=&#34;https://fwcb.cfans.umn.edu/personnel/todd-arnold&#34;&gt;Todd Arnold&lt;/a&gt; to use an integrated population model (IPM) to estimate population size and vital rates of the American woodcock (AMWO) using harvest data, band recovery data, and Singing Ground Surveys. We use an IPM framework to integrates multiple datatypes from AMWO and analyze them in conjunction. The results from our IPM reconcile discrepancies in inference from past studies that analyzed these datatypes independently.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>_Farr, M.T._, Green, D.S., Holekamp, K.E., Roloff, G.J., and Zipkin, E.F. (In Review after Revision) Multi-species hierarchical modeling reveals variable responses of African carnivores to management alternatives. Ecological Applications.</title>
+      <title>&lt;b&gt;Farr, M.T.&lt;b&gt;, Green, D.S., Holekamp, K.E., Roloff, G.J., and Zipkin, E.F. (In Review after Revision) Multi-species hierarchical modeling reveals variable responses of African carnivores to management alternatives. Ecological Applications.</title>
       <link>/Projects/posts/hmsds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -85,12 +75,22 @@ examining the code in this example and through reading the Hugo &lt;a href=&#34;
     </item>
     
     <item>
-      <title>_Farr, M.T._, Green, D.S., Holekamp, K.E., and Zipkin, E.F. (In Prep) Integrating distance sampling with presence only data.</title>
+      <title>&lt;b&gt;Farr, M.T.&lt;b&gt;, Green, D.S., Holekamp, K.E., and Zipkin, E.F. (In Prep) Integrating distance sampling with presence only data.</title>
       <link>/Projects/posts/isdm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/Projects/posts/isdm/</guid>
       <description>&lt;p&gt;I am developing an integrated species distribution model that combines presence only data from opportunistic surveying with distance sampling. Species distribution modeling (SDM) uses ecological covariates and occurrence data to predict a species’ distribution. However, SDMs often return biased estimates due to imperfect detection and sampling bias, but model estimates can be improved by integrating more structured sampling into the model. I am working with &lt;a href=&#34;http://inr.oregonstate.edu/people/david-green&#34;&gt;David Green&lt;/a&gt; and the &lt;a href=&#34;http://www.holekamplab.org/&#34;&gt;Holekamp lab&lt;/a&gt; to demonstrate the use of ISDMs by combining presence only data and distance sampling to evaluate human disturbance and apex predator decline on black-backed jackal distribution.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Saunders, S.P., &lt;b&gt;Farr, M.T.&lt;b&gt;, Wright, A.D., Bahlai, C.A., Ribeiro, J.W., Rossman, S., Sussman, A.L., Arnold, T.W., &amp; Zipkin E.F. (In Review) Disentangling data discrepancies and deficiencies with integrated population models.</title>
+      <link>/Projects/posts/amwo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/Projects/posts/amwo/</guid>
+      <description>&lt;p&gt;The Zipkin lab is collaborating with &lt;a href=&#34;https://fwcb.cfans.umn.edu/personnel/todd-arnold&#34;&gt;Todd Arnold&lt;/a&gt; to use an integrated population model (IPM) to estimate population size and vital rates of the American woodcock (AMWO) using harvest data, band recovery data, and Singing Ground Surveys. We use an IPM framework to integrates multiple datatypes from AMWO and analyze them in conjunction. The results from our IPM reconcile discrepancies in inference from past studies that analyzed these datatypes independently.&lt;/p&gt;
 </description>
     </item>
     
