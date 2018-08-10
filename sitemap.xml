@@ -13,14 +13,6 @@
   </url>
   
   <url>
-    <loc>/Projects/posts/hmsds/</loc>
-  </url>
-  
-  <url>
-    <loc>/Projects/posts/isdm/</loc>
-  </url>
-  
-  <url>
     <loc>/Projects/archives/</loc>
   </url>
   
@@ -33,6 +25,14 @@
   <url>
     <loc>/Projects/categories/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/Projects/posts/hmsds/</loc>
+  </url>
+  
+  <url>
+    <loc>/Projects/posts/isdm/</loc>
   </url>
   
   <url>
