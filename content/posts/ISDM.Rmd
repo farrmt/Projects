@@ -1,0 +1,9 @@
+---
+title: "Farr, M.T, Green, D.S., Holekamp, K.E., and Zipkin, E.F. (In Prep) Integrating distance sampling with presence only data."
+date: "August 10th, 2018"
+draft: false
+output:
+  blogdown::html_page
+---
+
+I am developing an integrated species distribution model that combines presence only data from opportunistic surveying with distance sampling. Species distribution modeling (SDM) uses ecological covariates and occurrence data to predict a species' distribution. However, SDMs often return biased estimates due to imperfect detection and sampling bias, but model estimates can be improved by integrating more structured sampling into the model. I am working with [David Green](http://inr.oregonstate.edu/people/david-green) and the [Holekamp lab](http://www.holekamplab.org/) to demonstrate the use of ISDMs by combining presence only data and distance sampling to evaluate human disturbance and apex predator decline on black-backed jackal distribution.
