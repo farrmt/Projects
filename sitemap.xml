@@ -8,6 +8,10 @@
   </url>
   
   <url>
+    <loc>https://farrmt.github.io/Projects/posts/hmsds/</loc>
+  </url>
+  
+  <url>
     <loc>https://farrmt.github.io/Projects/archives/</loc>
   </url>
   
@@ -19,6 +23,11 @@
   <url>
     <loc>https://farrmt.github.io/Projects/</loc>
     <lastmod>2017-12-21T03:21:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://farrmt.github.io/Projects/posts/</loc>
     <priority>0</priority>
   </url>
   

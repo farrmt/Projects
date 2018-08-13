@@ -24,6 +24,33 @@
     </item>
     
     <item>
+      <title></title>
+      <link>https://farrmt.github.io/Projects/posts/hmsds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://farrmt.github.io/Projects/posts/hmsds/</guid>
+      <description>&lt;div id=&#34;description&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Description&lt;/h2&gt;
+&lt;p&gt;I am working with &lt;a href=&#34;http://inr.oregonstate.edu/people/david-green&#34;&gt;David Green&lt;/a&gt; and the &lt;a href=&#34;http://www.holekamplab.org/&#34;&gt;Holekamp lab&lt;/a&gt; to quantify the impact of anthropogenic disturbance and management alternatives on the carnivore community within the Masai Mara National Reserve (MMNR), Kenya. Carnivore communities in the Serengeti-Mara ecosystem, including the MMNR, are among the most diverse in the world, but human-wildlife conflict threatens the continuation of this community. To understand the impact of anthropogenic disturbance on the carnivore community, we compare two disparate management regions within the MMNR that are managed by separate entities. The Mara Triangle experiences minimal disturbance while the Talek region contains high frequency of human-wildlife conflict. Using a hierarchical multi-species distance sampling model we estimate the community wide and species-specific effects of the Talek region on carnivore abundance and compared species’ abundances and group sizes between regions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Background&lt;/h2&gt;
+&lt;p&gt;This was my first project as a graduate student…&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;modeling-breakdown&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Modeling Breakdown&lt;/h2&gt;
+&lt;p&gt;Rahel to terestrial&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;for(t in 1:nreps){
+  for(j in 1:nsites){
+    y[t,j] ~ dbin(N[t,j], p[t,j])
+    N[t,j] ~ dpois(lambda[t,j])
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Archives</title>
       <link>https://farrmt.github.io/Projects/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
