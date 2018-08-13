@@ -49,6 +49,7 @@
 &lt;div id=&#34;modeling-breakdown&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Modeling Breakdown&lt;/h2&gt;
 &lt;p&gt;Rahel to terestrial&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[y_{t,j}\sim(N_{t,j}, p_{t,j})\]&lt;/span&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;for(t in 1:nreps){
   for(j in 1:nsites){
     y[t,j] ~ dbin(N[t,j], p[t,j])

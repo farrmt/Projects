@@ -107,6 +107,7 @@ window.onload = ready;
 <div id="modeling-breakdown" class="section level2">
 <h2>Modeling Breakdown</h2>
 <p>Rahel to terestrial</p>
+<p><span class="math display">\[y_{t,j}\sim(N_{t,j}, p_{t,j})\]</span></p>
 <pre class="r"><code>for(t in 1:nreps){
   for(j in 1:nsites){
     y[t,j] ~ dbin(N[t,j], p[t,j])
@@ -120,6 +121,12 @@ window.onload = ready;
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="//yihui.name/js/math-code.js"></script>
+	<script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
 <footer>
 	<p>Website Design -<a href="https://github.com/resugary/hugo-theme-one">Hugo-Theme-One</a> © 2017-2018.</p>
 </footer>
