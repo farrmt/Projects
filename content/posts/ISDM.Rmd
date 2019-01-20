@@ -1,5 +1,5 @@
 ---
-title: "Farr, M.T, Green, D.S., Holekamp, K.E., and Zipkin, E.F. (In Prep) Integrating distance sampling with presence only data."
+title: "Farr, M.T., Green, D.S., Holekamp, K.E., and Zipkin, E.F. (In Prep) Integrating distance sampling with presence only data."
 date: "August 10th, 2018"
 draft: false
 output:

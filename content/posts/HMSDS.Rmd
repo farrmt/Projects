@@ -1,9 +1,61 @@
 ---
-title: "Farr, M.T, Green, D.S., Holekamp, K.E., Roloff, G.J., and Zipkin, E.F. (In Review after Revision) Multi-species hierarchical modeling reveals variable responses of African carnivores to management alternatives. Ecological Applications."
-date: "March 21, 2018"
+title: "Farr, M.T., Green, D.S., Holekamp, K.E., Roloff, G.J., and Zipkin, E.F. (In Press) Multi-species hierarchical modeling reveals variable responses of African carnivores to management alternatives. Ecological Applications."
+date: "January 6th, 2019"
 draft: false
 output:
   blogdown::html_page
 ---
+## Description
+This work was done with [Dr. David Green](http://inr.oregonstate.edu/people/david-green) and the [Holekamp lab](http://www.holekamplab.org/) to quantify the impact of anthropogenic disturbance and management alternatives on the carnivore community within the Masai Mara National Reserve (MMNR), Kenya. Carnivore communities in the Serengeti-Mara ecosystem, including the MMNR, are among the most diverse in the world, but human-wildlife conflict threatens the continuation of this community. To understand the impact of anthropogenic disturbance on the carnivore community, we compared two disparate management regions within the MMNR that are managed by separate entities. The Mara Triangle experiences minimal disturbance while the Talek region contains high frequency of human-wildlife conflict. Using a hierarchical multi-species distance sampling model we estimate the community wide and species-specific effects of the Talek region on carnivore abundance and compared species’ abundances and group sizes between regions.
 
-I am working with [David Green](http://inr.oregonstate.edu/people/david-green) and the [Holekamp lab](http://www.holekamplab.org/) to quantify the impact of anthropogenic disturbance and management alternatives on the carnivore community within the Masai Mara National Reserve (MMNR), Kenya. Carnivore communities in the Serengeti-Mara ecosystem, including the MMNR, are among the most diverse in the world, but human-wildlife conflict threatens the continuation of this community. To understand the impact of anthropogenic disturbance on the carnivore community, we compare two disparate management regions within the MMNR that are managed by separate entities. The Mara Triangle experiences minimal disturbance while the Talek region contains high frequency of human-wildlife conflict. Using a hierarchical multi-species distance sampling model we estimate the community wide and species-specific effects of the Talek region on carnivore abundance and compared species’ abundances and group sizes between regions.
+## Background
+This was my first project as a graduate student, but the idea for this research originated before I started at Michigan State University. My part in this project began when I visited MSU as a prospective student for the [Zipkin Quantitative Ecology Lab](https://msu.edu/user/ezipkin/). Dr. Zipkin encouraged me to talk with members of her department where I met Dr. Kay Holekamp for the first time. At the time I was finishing a job as a field technician and looking for work. Coincidently, Dr. Holekamp was in need of a technician for her Mara Hyena Project. In less than a month I was on a plane headed to Nairobi, Kenya to begin an 8 month safari in the Masai Mara National Reserve.
+
+Looking for an interesting question. Priority was behavioral ecology of hyenas, but what stood out to me was disturbance.
+
+Dave Green and Gary...
+
+## Modeling Breakdown
+Dr. Beth Gardner suggested using Rahel framework. We took Rahel's framework from aquatic to terestrial.
+
+### Component 1: Binomial-Poisson Mixture
+The first component of this model is a binomial-Poisson mixture: 
+
+$$n_{t,j,s} \sim Binomial(N_{t,j,s}, p_{t,j,s})$$
+$$N_{t,j,s} \sim Poisson(\lambda_{t,j,s})$$
+$n_{t,j,s}$ is the recorded number of groups (for non-solitary species; more on this later) or counts (solitary species) during replicate $t$ of transect $j$ for species $s$. This is data! $N_{t,j,s}$ is the latent number of groups (non-solitary) or abundance (solitary), $p_{t,j,s}$ is detection probability, and $\lambda_{t,j,s}$ is the expected number of groups (non-solitary) or abundance (solitary).
+
+Here is the code:
+```{r, eval=FALSE}
+
+n[t,j,s] ~ dbin(N[t,j,s], pcap[t,j,s])
+N[t,j,s] ~ dpois(lambda[t,j,s])
+
+```
+
+The binomial part of this mixture is to link what we see/observe in the field to the actual biological process by accounting for imperfect detection. The second part of the mixture is accounting for stochasticity in latent abundance (or number of groups) by describing it as a random Poisson variable. 
+
+### Component 2: Imperfect Detection & Distance Sampling
+This first component is similar to an N-mixture model, but instead of detection probability being estimated from repeated surveys, it is estimated by a detection function using recorded distances. A variety of detection functions exist (see Buckland et al. 1993), but they all have one trait in common, which is that detection probability descreases as a function of distance from the transect.
+
+FIGURE
+
+To calculate detection probability you integrate the detection function to find the area under the curve; however, we approximate this integral using distance bins... 
+
+$$y_{t,j,s} \sim Multinomial(n_{t,j,s}, \pi^c_{t,j,s})$$
+JAGS does not allow for latent variable as a parameter of the multinomial distribution. Must use categorical distribution. See Royle
+
+```{r, eval=FALSE}
+dclass[i] ~ dcat(fc[1:nD, rep[i], site[i], spec[i]])
+
+g[k,t,j,s] <- exp(-mdpt[k]*mdpt[k]/(2*sigma[j,s]*sigma[j,s]))
+pi[k,t,j,s] <- v/B
+f[k,t,j,s] <- g[k,t,j,s] * pi[k,t,j,s]
+fc[k,t,j,s] <- f[k,t,j,s]/pcap[t,j,s]
+
+pcap[t,j,s] <- sum(f[1:nD,t,j,s])
+```
+
+Detection probability is derived. Sigma is estimated. Data is midpoints, y, n.
+
+### Component 3: Group Size
