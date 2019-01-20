@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Matthew Farr Projects</title>
-    <link>https://farrmt.github.io/Projects/</link>
+    <link>/Projects/</link>
     <description>Recent content on Matthew Farr Projects</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 21 Dec 2017 03:21:00 +0800</lastBuildDate>
     
-        <atom:link href="https://farrmt.github.io/Projects/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/Projects/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://farrmt.github.io/Projects/about/</link>
+      <link>/Projects/about/</link>
       <pubDate>Thu, 21 Dec 2017 03:21:00 +0800</pubDate>
       
-      <guid>https://farrmt.github.io/Projects/about/</guid>
+      <guid>/Projects/about/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/resugary/hugo-theme-one&#34;&gt;One&lt;/a&gt; is a minimal blog theme for Hugo, which is forked from &lt;a href=&#34;https://github.com/schollz/onetwothree&#34;&gt;onetwothree&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Source code is released under the MIT license on GitHub. Feel free to use if you want to learn more or contribute.&lt;/p&gt;
@@ -25,30 +25,87 @@
     
     <item>
       <title>Archives</title>
-      <link>https://farrmt.github.io/Projects/archives/</link>
+      <link>/Projects/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://farrmt.github.io/Projects/archives/</guid>
+      <guid>/Projects/archives/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Farr, M.T., Green, D.S., Holekamp, K.E., and Zipkin, E.F. (In Prep) Integrating distance sampling with presence only data.</title>
-      <link>https://farrmt.github.io/Projects/posts/isdm/</link>
+      <title>Farr, M.T., Green, D.S., Holekamp, K.E., Roloff, G.J., and Zipkin, E.F. (In Press) Multi-species hierarchical modeling reveals variable responses of African carnivores to management alternatives. Ecological Applications.</title>
+      <link>/Projects/posts/hmsds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://farrmt.github.io/Projects/posts/isdm/</guid>
+      <guid>/Projects/posts/hmsds/</guid>
+      <description>&lt;div id=&#34;description&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Description&lt;/h2&gt;
+&lt;p&gt;This work was done with &lt;a href=&#34;http://inr.oregonstate.edu/people/david-green&#34;&gt;Dr. David Green&lt;/a&gt; and the &lt;a href=&#34;http://www.holekamplab.org/&#34;&gt;Holekamp lab&lt;/a&gt; to quantify the impact of anthropogenic disturbance and management alternatives on the carnivore community within the Masai Mara National Reserve (MMNR), Kenya. Carnivore communities in the Serengeti-Mara ecosystem, including the MMNR, are among the most diverse in the world, but human-wildlife conflict threatens the continuation of this community. To understand the impact of anthropogenic disturbance on the carnivore community, we compared two disparate management regions within the MMNR that are managed by separate entities. The Mara Triangle experiences minimal disturbance while the Talek region contains high frequency of human-wildlife conflict. Using a hierarchical multi-species distance sampling model we estimate the community wide and species-specific effects of the Talek region on carnivore abundance and compared species’ abundances and group sizes between regions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Background&lt;/h2&gt;
+&lt;p&gt;This was my first project as a graduate student, but the idea for this research originated before I started at Michigan State University. My part in this project began when I visited MSU as a prospective student for the &lt;a href=&#34;https://msu.edu/user/ezipkin/&#34;&gt;Zipkin Quantitative Ecology Lab&lt;/a&gt;. Dr. Zipkin encouraged me to talk with members of her department where I met Dr. Kay Holekamp for the first time. At the time I was finishing a job as a field technician and looking for work. Coincidently, Dr. Holekamp was in need of a technician for her Mara Hyena Project. In less than a month I was on a plane headed to Nairobi, Kenya to begin an 8 month safari in the Masai Mara National Reserve.&lt;/p&gt;
+&lt;p&gt;Looking for an interesting question. Priority was behavioral ecology of hyenas, but what stood out to me was disturbance.&lt;/p&gt;
+&lt;p&gt;Dave Green and Gary…&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;modeling-breakdown&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Modeling Breakdown&lt;/h2&gt;
+&lt;p&gt;Dr. Beth Gardner suggested using Rahel framework. We took Rahel’s framework from aquatic to terestrial.&lt;/p&gt;
+&lt;div id=&#34;component-1-binomial-poisson-mixture&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Component 1: Binomial-Poisson Mixture&lt;/h3&gt;
+&lt;p&gt;The first component of this model is a binomial-Poisson mixture:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[n_{t,j,s} \sim Binomial(N_{t,j,s}, p_{t,j,s})\]&lt;/span&gt; &lt;span class=&#34;math display&#34;&gt;\[N_{t,j,s} \sim Poisson(\lambda_{t,j,s})\]&lt;/span&gt; &lt;span class=&#34;math inline&#34;&gt;\(n_{t,j,s}\)&lt;/span&gt; is the recorded number of groups (for non-solitary species; more on this later) or counts (solitary species) during replicate &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; of transect &lt;span class=&#34;math inline&#34;&gt;\(j\)&lt;/span&gt; for species &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;. This is data! &lt;span class=&#34;math inline&#34;&gt;\(N_{t,j,s}\)&lt;/span&gt; is the latent number of groups (non-solitary) or abundance (solitary), &lt;span class=&#34;math inline&#34;&gt;\(p_{t,j,s}\)&lt;/span&gt; is detection probability, and &lt;span class=&#34;math inline&#34;&gt;\(\lambda_{t,j,s}\)&lt;/span&gt; is the expected number of groups (non-solitary) or abundance (solitary).&lt;/p&gt;
+&lt;p&gt;Here is the code:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;n[t,j,s] ~ dbin(N[t,j,s], pcap[t,j,s])
+N[t,j,s] ~ dpois(lambda[t,j,s])&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The binomial part of this mixture is to link what we see/observe in the field to the actual biological process by accounting for imperfect detection. The second part of the mixture is accounting for stochasticity in latent abundance (or number of groups) by describing it as a random Poisson variable.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;component-2-imperfect-detection-distance-sampling&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Component 2: Imperfect Detection &amp;amp; Distance Sampling&lt;/h3&gt;
+&lt;p&gt;This first component is similar to an N-mixture model, but instead of detection probability being estimated from repeated surveys, it is estimated by a detection function using recorded distances. A variety of detection functions exist (see Buckland et al. 1993), but they all have one trait in common, which is that detection probability descreases as a function of distance from the transect.&lt;/p&gt;
+&lt;p&gt;FIGURE&lt;/p&gt;
+&lt;p&gt;To calculate detection probability you integrate the detection function to find the area under the curve; however, we approximate this integral using distance bins…&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[y_{t,j,s} \sim Multinomial(n_{t,j,s}, \pi^c_{t,j,s})\]&lt;/span&gt; JAGS does not allow for latent variable as a parameter of the multinomial distribution. Must use categorical distribution. See Royle&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dclass[i] ~ dcat(fc[1:nD, rep[i], site[i], spec[i]])
+
+g[k,t,j,s] &amp;lt;- exp(-mdpt[k]*mdpt[k]/(2*sigma[j,s]*sigma[j,s]))
+pi[k,t,j,s] &amp;lt;- v/B
+f[k,t,j,s] &amp;lt;- g[k,t,j,s] * pi[k,t,j,s]
+fc[k,t,j,s] &amp;lt;- f[k,t,j,s]/pcap[t,j,s]
+
+pcap[t,j,s] &amp;lt;- sum(f[1:nD,t,j,s])&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Detection probability is derived. Sigma is estimated. Data is midpoints, y, n.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;component-3-group-size&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Component 3: Group Size&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Farr, M.T., Green, D.S., Holekamp, K.E., and Zipkin, E.F. (In Prep) Integrating distance sampling with presence only data.</title>
+      <link>/Projects/posts/isdm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/Projects/posts/isdm/</guid>
       <description>&lt;p&gt;I am developing an integrated species distribution model that combines presence only data from opportunistic surveying with distance sampling. Species distribution modeling (SDM) uses ecological covariates and occurrence data to predict a species’ distribution. However, SDMs often return biased estimates due to imperfect detection and sampling bias, but model estimates can be improved by integrating more structured sampling into the model. I am working with &lt;a href=&#34;http://inr.oregonstate.edu/people/david-green&#34;&gt;David Green&lt;/a&gt; and the &lt;a href=&#34;http://www.holekamplab.org/&#34;&gt;Holekamp lab&lt;/a&gt; to demonstrate the use of ISDMs by combining presence only data and distance sampling to evaluate human disturbance and apex predator decline on black-backed jackal distribution.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Saunders, S.P., Farr, M.T., Wright, A.D., Bahlai, C.A., Ribeiro, J.W., Rossman, S., Sussman, A.L., Arnold, T.W., &amp; Zipkin E.F. (In Review) Disentangling data discrepancies and deficiencies with integrated population models.</title>
-      <link>https://farrmt.github.io/Projects/posts/amwo/</link>
+      <title>Saunders, S.P., Farr, M.T., Wright, A.D., Bahlai, C.A., Ribeiro, J.W., Rossman, S., Sussman, A.L., Arnold, T.W., &amp; Zipkin E.F. (In Press) Disentangling data discrepancies and deficiencies with integrated population models. Ecology.</title>
+      <link>/Projects/posts/amwo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://farrmt.github.io/Projects/posts/amwo/</guid>
-      <description>&lt;p&gt;The Zipkin lab is collaborating with &lt;a href=&#34;https://fwcb.cfans.umn.edu/personnel/todd-arnold&#34;&gt;Todd Arnold&lt;/a&gt; to use an integrated population model (IPM) to estimate population size and vital rates of the American woodcock (AMWO) using harvest data, band recovery data, and Singing Ground Surveys. We use an IPM framework to integrates multiple datatypes from AMWO and analyze them in conjunction. The results from our IPM reconcile discrepancies in inference from past studies that analyzed these datatypes independently.&lt;/p&gt;
+      <guid>/Projects/posts/amwo/</guid>
+      <description>&lt;div id=&#34;description&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Description&lt;/h2&gt;
+&lt;p&gt;The Zipkin lab collaborated with &lt;a href=&#34;https://fwcb.cfans.umn.edu/personnel/todd-arnold&#34;&gt;Todd Arnold&lt;/a&gt; to use an integrated population model (IPM) to estimate population size and vital rates of the American woodcock (AMWO) using harvest data, band recovery data, and Singing Ground Surveys. We used an IPM framework to integrate multiple datatypes from AMWO and analyze them in conjunction. The results from our IPM reconcile discrepancies in inference from past studies that analyzed these datatypes independently.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Background&lt;/h2&gt;
+&lt;/div&gt;
 </description>
     </item>
     
