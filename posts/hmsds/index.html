@@ -96,21 +96,21 @@ window.onload = ready;
 
 <div class="content">
   <h1>Farr, M.T., Green, D.S., Holekamp, K.E., Roloff, G.J., and Zipkin, E.F. (In Press) Multi-species hierarchical modeling reveals variable responses of African carnivores to management alternatives. Ecological Applications. <aside></aside></h1>
-  <div id="description" class="section level2">
-<h2>Description</h2>
+  <div id="description" class="section level1">
+<h1>Description</h1>
 <p>This work was done with <a href="http://inr.oregonstate.edu/people/david-green">Dr. David Green</a> and the <a href="http://www.holekamplab.org/">Holekamp lab</a> to quantify the impact of anthropogenic disturbance and management alternatives on the carnivore community within the Masai Mara National Reserve (MMNR), Kenya. Carnivore communities in the Serengeti-Mara ecosystem, including the MMNR, are among the most diverse in the world, but human-wildlife conflict threatens the continuation of this community. To understand the impact of anthropogenic disturbance on the carnivore community, we compared two disparate management regions within the MMNR that are managed by separate entities. The Mara Triangle experiences minimal disturbance while the Talek region contains high frequency of human-wildlife conflict. Using a hierarchical multi-species distance sampling model we estimate the community wide and species-specific effects of the Talek region on carnivore abundance and compared species’ abundances and group sizes between regions.</p>
 </div>
-<div id="background" class="section level2">
-<h2>Background</h2>
-<p>This was my first project as a graduate student, but the idea for this research originated before I started at Michigan State University. My part in this project began when I visited MSU as a prospective student for the <a href="https://msu.edu/user/ezipkin/">Zipkin Quantitative Ecology Lab</a>. Dr. Zipkin encouraged me to talk with members of her department where I met Dr. Kay Holekamp for the first time. At the time I was finishing a job as a field technician and looking for work. Coincidently, Dr. Holekamp was in need of a technician for her Mara Hyena Project. In less than a month I was on a plane headed to Nairobi, Kenya to begin an 8 month safari in the Masai Mara National Reserve.</p>
-<p>Looking for an interesting question. Priority was behavioral ecology of hyenas, but what stood out to me was disturbance.</p>
+<div id="background" class="section level1">
+<h1>Background</h1>
+<p>This was my first project as a graduate student, but the idea for this research originated before I started at Michigan State University. My part in this project began when I visited MSU as a prospective student for the <a href="https://msu.edu/user/ezipkin/">Zipkin Quantitative Ecology Lab</a>. Elise (Dr. Zipkin) encouraged me to talk with members of her department where I met Dr. Kay Holekamp for the first time. At the time I was finishing a job as a field technician and looking for work. Coincidently, Kay was in need of a technician for her Mara Hyena Project. In less than a month I was on a plane headed to Nairobi, Kenya to begin an 8 month safari in the Masai Mara National Reserve.</p>
+<p>Prior to my departure, Elise and I discussed the possiblility Looking for an interesting question. Priority was behavioral ecology of hyenas, but what stood out to me was disturbance.</p>
 <p>Dave Green and Gary…</p>
 </div>
-<div id="modeling-breakdown" class="section level2">
-<h2>Modeling Breakdown</h2>
+<div id="modeling-breakdown" class="section level1">
+<h1>Modeling Breakdown</h1>
 <p>Dr. Beth Gardner suggested using Rahel framework. We took Rahel’s framework from aquatic to terestrial.</p>
-<div id="component-1-binomial-poisson-mixture" class="section level3">
-<h3>Component 1: Binomial-Poisson Mixture</h3>
+<div id="component-1-binomial-poisson-mixture" class="section level2">
+<h2>Component 1: Binomial-Poisson Mixture</h2>
 <p>The first component of this model is a binomial-Poisson mixture:</p>
 <p><span class="math display">\[n_{t,j,s} \sim Binomial(N_{t,j,s}, p_{t,j,s})\]</span> <span class="math display">\[N_{t,j,s} \sim Poisson(\lambda_{t,j,s})\]</span> <span class="math inline">\(n_{t,j,s}\)</span> is the recorded number of groups (for non-solitary species; more on this later) or counts (solitary species) during replicate <span class="math inline">\(t\)</span> of transect <span class="math inline">\(j\)</span> for species <span class="math inline">\(s\)</span>. This is data! <span class="math inline">\(N_{t,j,s}\)</span> is the latent number of groups (non-solitary) or abundance (solitary), <span class="math inline">\(p_{t,j,s}\)</span> is detection probability, and <span class="math inline">\(\lambda_{t,j,s}\)</span> is the expected number of groups (non-solitary) or abundance (solitary).</p>
 <p>Here is the code:</p>
@@ -118,8 +118,8 @@ window.onload = ready;
 N[t,j,s] ~ dpois(lambda[t,j,s])</code></pre>
 <p>The binomial part of this mixture is to link what we see/observe in the field to the actual biological process by accounting for imperfect detection. The second part of the mixture is accounting for stochasticity in latent abundance (or number of groups) by describing it as a random Poisson variable.</p>
 </div>
-<div id="component-2-imperfect-detection-distance-sampling" class="section level3">
-<h3>Component 2: Imperfect Detection &amp; Distance Sampling</h3>
+<div id="component-2-imperfect-detection-distance-sampling" class="section level2">
+<h2>Component 2: Imperfect Detection &amp; Distance Sampling</h2>
 <p>This first component is similar to an N-mixture model, but instead of detection probability being estimated from repeated surveys, it is estimated by a detection function using recorded distances. A variety of detection functions exist (see Buckland et al. 1993), but they all have one trait in common, which is that detection probability descreases as a function of distance from the transect.</p>
 <p>FIGURE</p>
 <p>To calculate detection probability you integrate the detection function to find the area under the curve; however, we approximate this integral using distance bins…</p>
@@ -134,8 +134,8 @@ fc[k,t,j,s] &lt;- f[k,t,j,s]/pcap[t,j,s]
 pcap[t,j,s] &lt;- sum(f[1:nD,t,j,s])</code></pre>
 <p>Detection probability is derived. Sigma is estimated. Data is midpoints, y, n.</p>
 </div>
-<div id="component-3-group-size" class="section level3">
-<h3>Component 3: Group Size</h3>
+<div id="component-3-group-size" class="section level2">
+<h2>Component 3: Group Size</h2>
 </div>
 </div>
 
