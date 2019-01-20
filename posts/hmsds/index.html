@@ -1,134 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Farr, M.T., Green, D.S., Holekamp, K.E., Roloff, G.J., and Zipkin, E.F. (In Review after Revision) Multi-species hierarchical modeling reveals variable responses of African carnivores to management alternatives. Ecological Applications.</title>
-	
-	<meta name="description" content="">
-	<meta name="image" content="">
-	
-	<meta itemprop="name" content="Farr, M.T., Green, D.S., Holekamp, K.E., Roloff, G.J., and Zipkin, E.F. (In Review after Revision) Multi-species hierarchical modeling reveals variable responses of African carnivores to management alternatives. Ecological Applications.">
-	<meta itemprop="description" content="">
-	<meta itemprop="image" content="">
-	
-	<meta name="og:title" content="Farr, M.T., Green, D.S., Holekamp, K.E., Roloff, G.J., and Zipkin, E.F. (In Review after Revision) Multi-species hierarchical modeling reveals variable responses of African carnivores to management alternatives. Ecological Applications.">
-	<meta name="og:description" content="">
-	
-	<meta name="og:url" content="https://farrmt.github.io/Projects/posts/hmsds/">
-	<meta name="og:site_name" content="Farr, M.T., Green, D.S., Holekamp, K.E., Roloff, G.J., and Zipkin, E.F. (In Review after Revision) Multi-species hierarchical modeling reveals variable responses of African carnivores to management alternatives. Ecological Applications.">
-	<meta name="og:type" content="article">
-	
-	<meta name="article:tag" content="">
-	<link rel="stylesheet" type="text/css" href="https://farrmt.github.io/Projects/css/style.css">
-	
-	
-	
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-
-</head>
-
-<body>
-
-<header>
-	
-	<a href="https://farrmt.github.io/" style="float: left;color:#777;"><img src="https://farrmt.github.io/Projects//img/web.png" style="width:25px;height:25px;"></a>
-	
-	<a href="https://farrmt.github.io/Projects/" style="float: left;color:#777;"><strong>Matthew Farr Projects</strong></a>
-	
-	&nbsp;&nbsp;<a href="https://farrmt.github.io/Projects/archives/" style="color:#777;"><strong>Archives</strong></a>&nbsp;&nbsp;<a href="https://farrmt.github.io/Projects/about/" style="color:#777;"><strong>About</strong></a>
-	
-	
-	
-	<a href="https://farrmt.github.io/Projects/index.xml" style="color:#777;float: right;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></strong></a>
-</header>
-
-
-<div id="loadingMask" style="width: 100%; height: 100%; position: fixed; background: #fff;"></div>
-<script>
-function fadeOut(el) {
-  el.style.opacity = 1;
-
-  var last = +new Date();
-  var tick = function() {
-    el.style.opacity = +el.style.opacity - (new Date() - last) / 80;
-    last = +new Date();
-    
-
-    if (el.style.opacity > 0) {
-      (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
-    } else {
-      el.style.display='none';
-    }
-  };
-
-  tick();
-}
-
-function ready(fn) {
-    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
-         el = document.getElementById('loadingMask');
-         fadeOut(el);
-        var elements = document.querySelectorAll("img");
-        Array.prototype.forEach.call(elements, function(el, i) {
-            if (el.getAttribute("alt")) {
-                const caption = document.createElement('figcaption');
-                var node = document.createTextNode(el.getAttribute("alt"));
-                caption.appendChild(node);
-                const wrapper = document.createElement('figure');
-                wrapper.className = 'image';
-                el.parentNode.insertBefore(wrapper, el);
-                el.parentNode.removeChild(el);
-                wrapper.appendChild(el);
-                wrapper.appendChild(caption);
-            }
-        });
-
-    } else {
-        document.addEventListener('DOMContentLoaded', fn);
-    }
-}
-window.onload = ready;
-</script>
-
-<div class="content">
-  <h1>Farr, M.T., Green, D.S., Holekamp, K.E., Roloff, G.J., and Zipkin, E.F. (In Review after Revision) Multi-species hierarchical modeling reveals variable responses of African carnivores to management alternatives. Ecological Applications. <aside></aside></h1>
-  <div id="description" class="section level2">
+<div id="description" class="section level2">
 <h2>Description</h2>
-<p>I am working with <a href="http://inr.oregonstate.edu/people/david-green">David Green</a> and the <a href="http://www.holekamplab.org/">Holekamp lab</a> to quantify the impact of anthropogenic disturbance and management alternatives on the carnivore community within the Masai Mara National Reserve (MMNR), Kenya. Carnivore communities in the Serengeti-Mara ecosystem, including the MMNR, are among the most diverse in the world, but human-wildlife conflict threatens the continuation of this community. To understand the impact of anthropogenic disturbance on the carnivore community, we compare two disparate management regions within the MMNR that are managed by separate entities. The Mara Triangle experiences minimal disturbance while the Talek region contains high frequency of human-wildlife conflict. Using a hierarchical multi-species distance sampling model we estimate the community wide and species-specific effects of the Talek region on carnivore abundance and compared species’ abundances and group sizes between regions.</p>
+<p>This work was done with <a href="http://inr.oregonstate.edu/people/david-green">Dr. David Green</a> and the <a href="http://www.holekamplab.org/">Holekamp lab</a> to quantify the impact of anthropogenic disturbance and management alternatives on the carnivore community within the Masai Mara National Reserve (MMNR), Kenya. Carnivore communities in the Serengeti-Mara ecosystem, including the MMNR, are among the most diverse in the world, but human-wildlife conflict threatens the continuation of this community. To understand the impact of anthropogenic disturbance on the carnivore community, we compared two disparate management regions within the MMNR that are managed by separate entities. The Mara Triangle experiences minimal disturbance while the Talek region contains high frequency of human-wildlife conflict. Using a hierarchical multi-species distance sampling model we estimate the community wide and species-specific effects of the Talek region on carnivore abundance and compared species’ abundances and group sizes between regions.</p>
 </div>
 <div id="background" class="section level2">
 <h2>Background</h2>
-<p>This was my first project as a graduate student…</p>
+<p>This was my first project as a graduate student, but the idea for this research originated before I started at Michigan State University. My part in this project began when I visited MSU as a prospective student for the <a href="https://msu.edu/user/ezipkin/">Zipkin Quantitative Ecology Lab</a>. Dr. Zipkin encouraged me to talk with members of her department where I met Dr. Kay Holekamp for the first time. At the time I was finishing a job as a field technician and looking for work. Coincidently, Dr. Holekamp was in need of a technician for her Mara Hyena Project. In less than a month I was on a plane headed to Nairobi, Kenya to begin an 8 month safari in the Masai Mara National Reserve.</p>
+<p>Looking for an interesting question. Priority was behavioral ecology of hyenas, but what stood out to me was disturbance.</p>
+<p>Dave Green and Gary…</p>
 </div>
 <div id="modeling-breakdown" class="section level2">
 <h2>Modeling Breakdown</h2>
-<p>Rahel to terestrial</p>
-<p><span class="math display">\[y_{t,j} \sim Binomial(N_{t,j}, p_{t,j})\]</span></p>
-<pre class="r"><code>for(t in 1:nreps){
-  for(j in 1:nsites){
-    y[t,j] ~ dbin(N[t,j], p[t,j])
-    N[t,j] ~ dpois(lambda[t,j])
-  }
-}</code></pre>
+<p>Dr. Beth Gardner suggested using Rahel framework. We took Rahel’s framework from aquatic to terestrial.</p>
+<div id="component-1-binomial-poisson-mixture" class="section level3">
+<h3>Component 1: Binomial-Poisson Mixture</h3>
+<p>The first component of this model is a binomial-Poisson mixture:</p>
+<p><span class="math display">\[n_{t,j,s} \sim Binomial(N_{t,j,s}, p_{t,j,s})\]</span> <span class="math display">\[N_{t,j,s} \sim Poisson(\lambda_{t,j,s})\]</span> <span class="math inline">\(n_{t,j,s}\)</span> is the recorded number of groups (for non-solitary species; more on this later) or counts (solitary species) during replicate <span class="math inline">\(t\)</span> of transect <span class="math inline">\(j\)</span> for species <span class="math inline">\(s\)</span>. This is data! <span class="math inline">\(N_{t,j,s}\)</span> is the latent number of groups (non-solitary) or abundance (solitary), <span class="math inline">\(p_{t,j,s}\)</span> is detection probability, and <span class="math inline">\(\lambda_{t,j,s}\)</span> is the expected number of groups (non-solitary) or abundance (solitary).</p>
+<p>Here is the code:</p>
+<pre class="r"><code>n[t,j,s] ~ dbin(N[t,j,s], pcap[t,j,s])
+N[t,j,s] ~ dpois(lambda[t,j,s])</code></pre>
+<p>The binomial part of this mixture is to link what we see/observe in the field to the actual biological process by accounting for imperfect detection. The second part of the mixture is accounting for stochasticity in latent abundance (or number of groups) by describing it as a random Poisson variable.</p>
 </div>
+<div id="component-2-imperfect-detection-distance-sampling" class="section level3">
+<h3>Component 2: Imperfect Detection &amp; Distance Sampling</h3>
+<p>This first component is similar to an N-mixture model, but instead of detection probability being estimated from repeated surveys, it is estimated by a detection function using recorded distances. A variety of detection functions exist (see Buckland et al. 1993), but they all have one trait in common, which is that detection probability descreases as a function of distance from the transect.</p>
+<p>FIGURE</p>
+<p>To calculate detection probability you integrate the detection function to find the area under the curve; however, we approximate this integral using distance bins…</p>
+<p><span class="math display">\[y_{t,j,s} \sim Multinomial(n_{t,j,s}, \pi^c_{t,j,s})\]</span> JAGS does not allow for latent variable as a parameter of the multinomial distribution. Must use categorical distribution. See Royle</p>
+<pre class="r"><code>dclass[i] ~ dcat(fc[1:nD, rep[i], site[i], spec[i]])
 
+g[k,t,j,s] &lt;- exp(-mdpt[k]*mdpt[k]/(2*sigma[j,s]*sigma[j,s]))
+pi[k,t,j,s] &lt;- v/B
+f[k,t,j,s] &lt;- g[k,t,j,s] * pi[k,t,j,s]
+fc[k,t,j,s] &lt;- f[k,t,j,s]/pcap[t,j,s]
+
+pcap[t,j,s] &lt;- sum(f[1:nD,t,j,s])</code></pre>
+<p>Detection probability is derived. Sigma is estimated. Data is midpoints, y, n.</p>
 </div>
-
-
-
-
-<footer>
-	<p>Website Design -<a href="https://github.com/resugary/hugo-theme-one">Hugo-Theme-One</a> © 2017-2018.</p>
-</footer>
+<div id="component-3-group-size" class="section level3">
+<h3>Component 3: Group Size</h3>
 </div>
-<script src="//yihui.name/js/math-code.js"></script>
-<script async
-src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-</body>
-</html>
-
+</div>
