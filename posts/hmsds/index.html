@@ -104,15 +104,51 @@ window.onload = ready;
 <h1>Background</h1>
 <p>This was my first project as a graduate student, but the idea for this research originated before I started at Michigan State University. My part in this project began when I visited MSU as a prospective student for the <a href="https://msu.edu/user/ezipkin/">Zipkin Quantitative Ecology Lab</a>. Elise (Dr. Zipkin) encouraged me to talk with members of her department where I met Dr. Kay Holekamp for the first time. At the time I was finishing a job as a field technician and looking for work. Coincidently, Kay was in need of a technician for her Mara Hyena Project. In less than a month I was on a plane headed to Nairobi, Kenya to begin an 8 month safari in the Masai Mara National Reserve.</p>
 <div class="figure">
-<img src="/Projects/img/HMSDS_01.JPG" alt="Masai Mara" />
-<p class="caption">Masai Mara</p>
+<img src="/Projects/img/HMSDS_01.JPG" />
+
 </div>
-<p>Prior to my departure, Elise and I discussed the possiblility of using long-term data from Kay’s project for my dissertation research. So while I was primarily working on Kay’s project (monitoring the behavioral ecology of spotted hyenas), I was also keeping my eyes open for a potential interesting research question.</p>
-<p>Dave Green and Gary…</p>
+<div class="figure">
+<img src="/Projects/img/HMSDS_02.JPG" />
+
+</div>
+<p>Prior to my departure, Elise and I discussed the possiblility of using long-term data from Kay’s project for my dissertation research. So while I was primarily working on Kay’s project (monitoring the behavioral ecology of spotted hyenas), I was also keeping my eyes open for a potential interesting research question. During my tenure there, nothing was more obvious than the intensity of human disturbance in the form of tourism and livestock grazing. <img src="/Projects/img/HMSDS_02.jpg" /> Cheetah surrounded by tourist vehicles</p>
+<div class="figure">
+<img src="/Projects/img/HMSDS_04.jpg" alt="Masai livestock (Photo credit: Chase O’Neil)" />
+<p class="caption">Masai livestock (Photo credit: Chase O’Neil)</p>
+</div>
+<p>Though the presence of disturbance was obvious, I was curious how wildlife were responding inside the Reserve. Upon my return to the States and start of graduate school at MSU, I talked about potential research ideas with David Green, who was a PhD student in Kay’s lab at the time. Dave had actually spent most of his PhD interested in the effects of human distrubance on widlife. He along with Kay and Dr. Gary Roloff had designed and conducted a distance sampling study between 2012 and 2014 to estimate the abundance of wildlife within the Reserve. This was the beginning of a collaboration that resulted in my first scientific paper on the effects of management and resulting disturbance on carnivore communities.</p>
+<div class="figure">
+<img src="/Projects/img/HMSDS_05.JPG" alt="Lioness (Photo credit: David Green)" />
+<p class="caption">Lioness (Photo credit: David Green)</p>
+</div>
+<div class="figure">
+<img src="/Projects/img/HMSDS_06.JPG" alt="4 male lions (Photo credit: David Green)" />
+<p class="caption">4 male lions (Photo credit: David Green)</p>
+</div>
+<div class="figure">
+<img src="/Projects/img/HMSDS_07.JPG" alt="Juvenile spotted hyena" />
+<p class="caption">Juvenile spotted hyena</p>
+</div>
+<div class="figure">
+<img src="/Projects/img/HMSDS_08.JPG" alt="Adult hyena carrying a topi skull" />
+<p class="caption">Adult hyena carrying a topi skull</p>
+</div>
+<div class="figure">
+<img src="/Projects/img/HMSDS_09.JPG" alt="Black-backed jackal (Photo credit: Chase O’Neil)" />
+<p class="caption">Black-backed jackal (Photo credit: Chase O’Neil)</p>
+</div>
+<div class="figure">
+<img src="/Projects/img/HMSDS_10.JPG" alt="Adult cheetah and 3 cubs" />
+<p class="caption">Adult cheetah and 3 cubs</p>
+</div>
+<div class="figure">
+<img src="/Projects/img/HMSDS_11.JPG" alt="Serval" />
+<p class="caption">Serval</p>
+</div>
 </div>
 <div id="modeling-breakdown" class="section level1">
 <h1>Modeling Breakdown</h1>
-<p>Dr. Beth Gardner suggested using Rahel framework. We took Rahel’s framework from aquatic to terestrial.</p>
+<p>Most of my work for this paper was both estimating the abundance of multiple carnivore species and measuring the effect of management regimes (disturbed vs undisturbed) on the entire carnivore community. We based this off Sollmann et al. 2016.</p>
 <div id="component-1-binomial-poisson-mixture" class="section level2">
 <h2>Component 1: Binomial-Poisson Mixture</h2>
 <p>The first component of this model is a binomial-Poisson mixture:</p>
@@ -128,9 +164,8 @@ N[t,j,s] ~ dpois(lambda[t,j,s])</code></pre>
 <p>FIGURE</p>
 <p>To calculate detection probability you integrate the detection function to find the area under the curve; however, we approximate this integral using distance bins…</p>
 <p><span class="math display">\[y_{t,j,s} \sim Multinomial(n_{t,j,s}, \pi^c_{t,j,s})\]</span> JAGS does not allow for latent variable as a parameter of the multinomial distribution. Must use categorical distribution. See Royle</p>
-<pre class="r"><code>dclass[i] ~ dcat(fc[1:nD, rep[i], site[i], spec[i]])
-
-g[k,t,j,s] &lt;- exp(-mdpt[k]*mdpt[k]/(2*sigma[j,s]*sigma[j,s]))
+<pre class="r"><code>dclass[i] ~ dcat(fc[1:nD, rep[i], site[i], spec[i]])</code></pre>
+<pre class="r"><code>g[k,t,j,s] &lt;- exp(-mdpt[k]*mdpt[k]/(2*sigma[j,s]*sigma[j,s]))
 pi[k,t,j,s] &lt;- v/B
 f[k,t,j,s] &lt;- g[k,t,j,s] * pi[k,t,j,s]
 fc[k,t,j,s] &lt;- f[k,t,j,s]/pcap[t,j,s]
@@ -140,6 +175,25 @@ pcap[t,j,s] &lt;- sum(f[1:nD,t,j,s])</code></pre>
 </div>
 <div id="component-3-group-size" class="section level2">
 <h2>Component 3: Group Size</h2>
+<pre class="r"><code>gs[i] ~ dpois(gs.lambda[s.rep[i], s.site[i], s.spec[i]]) T(1,)</code></pre>
+</div>
+<div id="component-4-linear-predictors" class="section level2">
+<h2>Component 4: Linear Predictors</h2>
+<pre class="r"><code>lambda[t,j,s] &lt;- exp(alpha0[s] + ...)</code></pre>
+</div>
+<div id="component-5-community-hyper-distributions" class="section level2">
+<h2>Component 5: Community Hyper-distributions</h2>
+<pre class="r"><code>alpha0[s] ~ dnorm(mu_a0, tau_a0)
+
+mu_a0 ~ dnorm(0, 0.01)
+tau_a0 ~ dgamma(0.1, 0.1)
+sig_a0 &lt;- 1/sqrt(tau_a0)</code></pre>
+</div>
+<div id="miscellaneous-negative-binomial-as-poisson-gamma-mixture" class="section level2">
+<h2>Miscellaneous: Negative Binomial as Poisson-gamma mixture</h2>
+<pre class="r"><code>N[i] ~ dpois(lambda[i]*rho[i])
+rho[i] ~ dgamma(r, r)
+r ~ dgamma(0.1, 0.1)</code></pre>
 </div>
 </div>
 
