@@ -6,10 +6,36 @@
     <description>Recent content on Projects</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jan 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://farrmt.github.io/Projects/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Farr, M.T., Green, D.S., Holekamp, K.E., and Zipkin, E.F. (In Prep) Integrating distance sampling with presence only data.</title>
+      <link>https://farrmt.github.io/Projects/posts/isdm/</link>
+      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://farrmt.github.io/Projects/posts/isdm/</guid>
+      <description>&lt;p&gt;I am developing an integrated species distribution model that combines presence only data from opportunistic surveying with distance sampling. Species distribution modeling (SDM) uses ecological covariates and occurrence data to predict a species’ distribution. However, SDMs often return biased estimates due to imperfect detection and sampling bias, but model estimates can be improved by integrating more structured sampling into the model. I am working with &lt;a href=&#34;http://inr.oregonstate.edu/people/david-green&#34;&gt;David Green&lt;/a&gt; and the &lt;a href=&#34;http://www.holekamplab.org/&#34;&gt;Holekamp lab&lt;/a&gt; to demonstrate the use of ISDMs by combining presence only data and distance sampling to evaluate human disturbance and apex predator decline on black-backed jackal distribution.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Saunders, S.P., Farr, M.T., Wright, A.D., Bahlai, C.A., Ribeiro, J.W., Rossman, S., Sussman, A.L., Arnold, T.W., &amp; Zipkin E.F. (In Press) Disentangling data discrepancies and deficiencies with integrated population models. Ecology.</title>
+      <link>https://farrmt.github.io/Projects/posts/amwo/</link>
+      <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://farrmt.github.io/Projects/posts/amwo/</guid>
+      <description>&lt;div id=&#34;description&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Description&lt;/h2&gt;
+&lt;p&gt;The Zipkin lab collaborated with &lt;a href=&#34;https://fwcb.cfans.umn.edu/personnel/todd-arnold&#34;&gt;Todd Arnold&lt;/a&gt; to use an integrated population model (IPM) to estimate population size and vital rates of the American woodcock (AMWO) using harvest data, band recovery data, and Singing Ground Surveys. We used an IPM framework to integrate multiple datatypes from AMWO and analyze them in conjunction. The results from our IPM reconcile discrepancies in inference from past studies that analyzed these datatypes independently.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Background&lt;/h2&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Farr, M.T., Green, D.S., Holekamp, K.E., Roloff, G.J., and Zipkin, E.F. (In Press) Multispecies hierarchical modeling reveals variable responses of African carnivores to management alternatives. Ecological Applications.</title>
@@ -27,16 +53,21 @@
 &lt;p&gt;&lt;img src=&#34;https://farrmt.github.io/Projects/Projects/img/HMSDS_01.JPG&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://farrmt.github.io/Projects/Projects/img/HMSDS_02.JPG&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Prior to my departure, Elise and I discussed the possiblility of using long-term data from Kay’s project for my dissertation research. So while I was primarily working on Kay’s project (monitoring the behavioral ecology of spotted hyenas), I was also keeping my eyes open for a potential interesting research question. During my tenure there, nothing was more obvious than the intensity of human disturbance in the form of tourism and livestock grazing.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://farrmt.github.io/Projects/Projects/img/HMSDS_03.jpg&#34; alt=&#34;Cheetah surrounded by tourist vehicles&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://farrmt.github.io/Projects/Projects/img/HMSDS_03.jpg&#34; alt=&#34;Cheetah surrounded by tourist vehicles (Photo credit: Matthew Farr)&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://farrmt.github.io/Projects/Projects/img/HMSDS_04.jpg&#34; alt=&#34;Masai livestock (Photo credit: Chase O’Neil)&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Though the presence of disturbance was obvious, I was curious how wildlife were responding inside the Reserve. Upon my return to the States and start of graduate school at MSU, I talked about potential research ideas with David Green, who was a PhD student in Kay’s lab at the time. Dave had actually spent most of his PhD interested in the effects of human distrubance on widlife. He along with Kay and Dr. Gary Roloff had designed and conducted a distance sampling study between 2012 and 2014 to estimate the abundance of wildlife within the Reserve. This was the beginning of a collaboration that resulted in my first scientific paper on the effects of management and resulting disturbance on carnivore communities.&lt;/p&gt;
+&lt;p&gt;Though the presence of disturbance was obvious, I was curious how wildlife were responding inside the Reserve. Upon my return to the States and start of graduate school at MSU, I talked about potential research ideas with David Green, who was a PhD student in Kay’s lab at the time. Dave had actually spent most of his PhD interested in the effects of human distrubance on widlife. He along with Kay and Dr. Gary Roloff had designed and conducted a distance sampling study between 2012 and 2014 to estimate the abundance of wildlife within the Reserve. Here are photos of a few carnivore species seen during surveys.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://farrmt.github.io/Projects/Projects/img/HMSDS_05.jpg&#34; alt=&#34;Lioness (Photo credit: David Green)&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://farrmt.github.io/Projects/Projects/img/HMSDS_06.jpg&#34; alt=&#34;4 male lions (Photo credit: David Green)&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://farrmt.github.io/Projects/Projects/img/HMSDS_07.JPG&#34; alt=&#34;Juvenile spotted hyena&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://farrmt.github.io/Projects/Projects/img/HMSDS_08.JPG&#34; alt=&#34;Adult hyena carrying a topi skull&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://farrmt.github.io/Projects/Projects/img/HMSDS_07.JPG&#34; alt=&#34;Juvenile spotted hyena (Photo credit: Matthew Farr)&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://farrmt.github.io/Projects/Projects/img/HMSDS_08.JPG&#34; alt=&#34;Adult hyena carrying a topi skull (Photo credit: Matthew Farr)&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://farrmt.github.io/Projects/Projects/img/HMSDS_09.JPG&#34; alt=&#34;Black-backed jackal (Photo credit: Chase O’Neil)&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://farrmt.github.io/Projects/Projects/img/HMSDS_10.JPG&#34; alt=&#34;Adult cheetah and 3 cubs&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://farrmt.github.io/Projects/Projects/img/HMSDS_10.JPG&#34; alt=&#34;Adult cheetah and 3 cubs (Photo credit: Matthew Farr)&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://farrmt.github.io/Projects/Projects/img/HMSDS_11.JPG&#34; alt=&#34;Serval&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This was the beginning of a collaboration that took 3.5 more years to get published! Our main finding, unsurprisingly, was that passive managment of wildlife regulations (i.e., prevention of human disturbance) had a negative effect on the carnivore community. But, surprisingly, some species (e.g., spotted hyena, black-backed jackal) actually were more abundant in the presence of disturbance. A reduction in lion abundance due to conflicts with humans is allowing for hyenas and jackals to flourish in the absence of competition. Another hypothesis is that these 2 species are more easily adjusting/adapting to human activities. Either way, communities including this carnivore community often do not responding uniformly to humans or the environment, as such it is important to consider the entire community for either conservation or wildlife management.&lt;/p&gt;
+&lt;p&gt;This was an extremely beneficial project for me as a new PhD student! Determination and persitance are what got this project done and a few technical pieces that I had to learn along the way. If you’re interested in the statistical side of this project, which I hope you are, keep reading below. And if not… stay tuned for future project blogs!&lt;/p&gt;
+&lt;p&gt;Matthew Farr &lt;a href=&#34;mailto:farrmat1@msu.edu&#34;&gt;farrmat1@msu.edu&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To read the actual publication click &lt;a href=&#34;link!&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To return to recent post click &lt;a href=&#34;https://farrmt.github.io/Projects/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;modeling-breakdown&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Modeling Breakdown&lt;/h1&gt;
@@ -110,32 +141,6 @@ r ~ dgamma(0.1, 0.1)&lt;/code&gt;&lt;/pre&gt;
       
       <guid>https://farrmt.github.io/Projects/archives/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Farr, M.T., Green, D.S., Holekamp, K.E., and Zipkin, E.F. (In Prep) Integrating distance sampling with presence only data.</title>
-      <link>https://farrmt.github.io/Projects/posts/isdm/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://farrmt.github.io/Projects/posts/isdm/</guid>
-      <description>&lt;p&gt;I am developing an integrated species distribution model that combines presence only data from opportunistic surveying with distance sampling. Species distribution modeling (SDM) uses ecological covariates and occurrence data to predict a species’ distribution. However, SDMs often return biased estimates due to imperfect detection and sampling bias, but model estimates can be improved by integrating more structured sampling into the model. I am working with &lt;a href=&#34;http://inr.oregonstate.edu/people/david-green&#34;&gt;David Green&lt;/a&gt; and the &lt;a href=&#34;http://www.holekamplab.org/&#34;&gt;Holekamp lab&lt;/a&gt; to demonstrate the use of ISDMs by combining presence only data and distance sampling to evaluate human disturbance and apex predator decline on black-backed jackal distribution.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Saunders, S.P., Farr, M.T., Wright, A.D., Bahlai, C.A., Ribeiro, J.W., Rossman, S., Sussman, A.L., Arnold, T.W., &amp; Zipkin E.F. (In Press) Disentangling data discrepancies and deficiencies with integrated population models. Ecology.</title>
-      <link>https://farrmt.github.io/Projects/posts/amwo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://farrmt.github.io/Projects/posts/amwo/</guid>
-      <description>&lt;div id=&#34;description&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Description&lt;/h2&gt;
-&lt;p&gt;The Zipkin lab collaborated with &lt;a href=&#34;https://fwcb.cfans.umn.edu/personnel/todd-arnold&#34;&gt;Todd Arnold&lt;/a&gt; to use an integrated population model (IPM) to estimate population size and vital rates of the American woodcock (AMWO) using harvest data, band recovery data, and Singing Ground Surveys. We used an IPM framework to integrate multiple datatypes from AMWO and analyze them in conjunction. The results from our IPM reconcile discrepancies in inference from past studies that analyzed these datatypes independently.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Background&lt;/h2&gt;
-&lt;/div&gt;
-</description>
     </item>
     
   </channel>
