@@ -1,24 +1,58 @@
 ---
-title: "Farr, M.T., Green, D.S., Holekamp, K.E., Roloff, G.J., and Zipkin, E.F. (In Press) Multi-species hierarchical modeling reveals variable responses of African carnivores to management alternatives. Ecological Applications."
-date: "January 6th, 2019"
+title: "Farr, M.T., Green, D.S., Holekamp, K.E., Roloff, G.J., and Zipkin, E.F. (In Press) Multispecies hierarchical modeling reveals variable responses of African carnivores to management alternatives. Ecological Applications."
+date: "2019-01-20"
 draft: false
 output:
-  blogdown::html_page
+  blogdown::html_page:
+    fig_caption: false
 ---
-## Description
-This work was done with [Dr. David Green](http://inr.oregonstate.edu/people/david-green) and the [Holekamp lab](http://www.holekamplab.org/) to quantify the impact of anthropogenic disturbance and management alternatives on the carnivore community within the Masai Mara National Reserve (MMNR), Kenya. Carnivore communities in the Serengeti-Mara ecosystem, including the MMNR, are among the most diverse in the world, but human-wildlife conflict threatens the continuation of this community. To understand the impact of anthropogenic disturbance on the carnivore community, we compared two disparate management regions within the MMNR that are managed by separate entities. The Mara Triangle experiences minimal disturbance while the Talek region contains high frequency of human-wildlife conflict. Using a hierarchical multi-species distance sampling model we estimate the community wide and species-specific effects of the Talek region on carnivore abundance and compared species’ abundances and group sizes between regions.
+# Description
+This work was done with [Dr. David Green](http://inr.oregonstate.edu/people/david-green), the [Holekamp lab](http://www.holekamplab.org/) along with [Dr. Gary Roloff](https://www.afwelsite.com) to quantify the impact of anthropogenic disturbance and management alternatives on the carnivore community within the Masai Mara National Reserve (MMNR), Kenya. Carnivore communities in the Serengeti-Mara ecosystem, including the MMNR, are among the most diverse in the world, but human-wildlife conflict threatens the continuation of this community. To understand the impact of anthropogenic disturbance on the carnivore community, we compared two disparate management regions within the MMNR that are managed by separate entities. The Mara Triangle experiences minimal disturbance while the Talek region contains high frequency of human-wildlife conflict. Using a hierarchical multi-species distance sampling model we estimate the community wide and species-specific effects of the Talek region on carnivore abundance and compared species’ abundances and group sizes between regions.
 
-## Background
-This was my first project as a graduate student, but the idea for this research originated before I started at Michigan State University. My part in this project began when I visited MSU as a prospective student for the [Zipkin Quantitative Ecology Lab](https://msu.edu/user/ezipkin/). Dr. Zipkin encouraged me to talk with members of her department where I met Dr. Kay Holekamp for the first time. At the time I was finishing a job as a field technician and looking for work. Coincidently, Dr. Holekamp was in need of a technician for her Mara Hyena Project. In less than a month I was on a plane headed to Nairobi, Kenya to begin an 8 month safari in the Masai Mara National Reserve.
+# Background
+This was my first project as a graduate student, but the idea for this research originated before I started at Michigan State University. My part in this project began when I visited MSU as a prospective student for the [Zipkin Quantitative Ecology Lab](https://msu.edu/user/ezipkin/). Elise (Dr. Zipkin) encouraged me to talk with members of her department where I met Dr. Kay Holekamp for the first time. At the time I was finishing a job as a field technician and looking for work. Coincidently, Kay was in need of a technician for her Mara Hyena Project. In less than a month I was on a plane headed to Nairobi, Kenya to begin an 8 month safari in the Masai Mara National Reserve.
 
-Looking for an interesting question. Priority was behavioral ecology of hyenas, but what stood out to me was disturbance.
+![](/Projects/img/HMSDS_01.JPG)
 
-Dave Green and Gary...
+![](/Projects/img/HMSDS_02.JPG)
 
-## Modeling Breakdown
-Dr. Beth Gardner suggested using Rahel framework. We took Rahel's framework from aquatic to terestrial.
+Prior to my departure, Elise and I discussed the possiblility of using long-term data from Kay's project for my dissertation research. So while I was primarily working on Kay's project (monitoring the behavioral ecology of spotted hyenas), I was also keeping my eyes open for a potential interesting research question. During my tenure there, nothing was more obvious than the intensity of human disturbance in the form of tourism and livestock grazing.
 
-### Component 1: Binomial-Poisson Mixture
+![Cheetah surrounded by tourist vehicles (Photo credit: Matthew Farr)](/Projects/img/HMSDS_03.jpg)
+
+![Masai livestock (Photo credit: Chase O'Neil)](/Projects/img/HMSDS_04.jpg)
+
+Though the presence of disturbance was obvious, I was curious how wildlife were responding inside the Reserve. Upon my return to the States and start of graduate school at MSU, I talked about potential research ideas with David Green, who was a PhD student in Kay's lab at the time. Dave had actually spent most of his PhD interested in the effects of human distrubance on widlife. He along with Kay and Dr. Gary Roloff had designed and conducted a distance sampling study between 2012 and 2014 to estimate the abundance of wildlife within the Reserve. Here are photos of a few carnivore species seen during surveys.
+
+![Lioness (Photo credit: David Green)](/Projects/img/HMSDS_05.jpg)
+
+![4 male lions (Photo credit: David Green)](/Projects/img/HMSDS_06.jpg)
+
+![Juvenile spotted hyena (Photo credit: Matthew Farr)](/Projects/img/HMSDS_07.JPG)
+
+![Adult hyena carrying a topi skull (Photo credit: Matthew Farr)](/Projects/img/HMSDS_08.JPG)
+
+![Black-backed jackal (Photo credit: Chase O'Neil)](/Projects/img/HMSDS_09.JPG)
+
+![Adult cheetah and 3 cubs (Photo credit: Matthew Farr)](/Projects/img/HMSDS_10.JPG)
+
+![Serval](/Projects/img/HMSDS_11.JPG)
+
+This was the beginning of a collaboration that took 3.5 more years to get published! Our main finding, unsurprisingly, was that passive managment of wildlife regulations (i.e., prevention of human disturbance) had a negative effect on the carnivore community. But, surprisingly, some species (e.g., spotted hyena, black-backed jackal) actually were more abundant in the presence of disturbance. A reduction in lion abundance due to conflicts with humans is allowing for hyenas and jackals to flourish in the absence of competition. Another hypothesis is that these 2 species are more easily adjusting/adapting to human activities. Either way, communities including this carnivore community often do not responding uniformly to humans or the environment, as such it is important to consider the entire community for either conservation or wildlife management.
+
+This was an extremely beneficial project for me as a new PhD student! Determination and persitance are what got this project done and a few technical pieces that I had to learn along the way. If you're interested in the statistical side of this project, which I hope you are, keep reading below. And if not... stay tuned for future project blogs!
+
+Matthew Farr
+[farrmat1@msu.edu](mailto:farrmat1@msu.edu)
+
+To read the actual publication click [here](link!).
+
+To return to recent post click [here](https://farrmt.github.io/Projects/).
+
+# Modeling Breakdown
+Most of my work for this paper was both estimating the abundance of multiple carnivore species and measuring the effect of management regimes (disturbed vs undisturbed) on the entire carnivore community. We based this off Sollmann et al. 2016.
+
+## Component 1: Binomial-Poisson Mixture
 The first component of this model is a binomial-Poisson mixture: 
 
 $$n_{t,j,s} \sim Binomial(N_{t,j,s}, p_{t,j,s})$$
@@ -35,7 +69,7 @@ N[t,j,s] ~ dpois(lambda[t,j,s])
 
 The binomial part of this mixture is to link what we see/observe in the field to the actual biological process by accounting for imperfect detection. The second part of the mixture is accounting for stochasticity in latent abundance (or number of groups) by describing it as a random Poisson variable. 
 
-### Component 2: Imperfect Detection & Distance Sampling
+## Component 2: Imperfect Detection & Distance Sampling
 This first component is similar to an N-mixture model, but instead of detection probability being estimated from repeated surveys, it is estimated by a detection function using recorded distances. A variety of detection functions exist (see Buckland et al. 1993), but they all have one trait in common, which is that detection probability descreases as a function of distance from the transect.
 
 FIGURE
@@ -47,7 +81,9 @@ JAGS does not allow for latent variable as a parameter of the multinomial distri
 
 ```{r, eval=FALSE}
 dclass[i] ~ dcat(fc[1:nD, rep[i], site[i], spec[i]])
+```
 
+```{r, eval=FALSE}
 g[k,t,j,s] <- exp(-mdpt[k]*mdpt[k]/(2*sigma[j,s]*sigma[j,s]))
 pi[k,t,j,s] <- v/B
 f[k,t,j,s] <- g[k,t,j,s] * pi[k,t,j,s]
@@ -58,4 +94,31 @@ pcap[t,j,s] <- sum(f[1:nD,t,j,s])
 
 Detection probability is derived. Sigma is estimated. Data is midpoints, y, n.
 
-### Component 3: Group Size
+## Component 3: Group Size
+
+```{r, eval=FALSE}
+gs[i] ~ dpois(gs.lambda[s.rep[i], s.site[i], s.spec[i]]) T(1,)
+```
+
+## Component 4: Linear Predictors
+
+```{r, eval=FALSE}
+lambda[t,j,s] <- exp(alpha0[s] + ...)
+```
+
+## Component 5: Community Hyper-distributions
+```{r, eval=FALSE}
+alpha0[s] ~ dnorm(mu_a0, tau_a0)
+
+mu_a0 ~ dnorm(0, 0.01)
+tau_a0 ~ dgamma(0.1, 0.1)
+sig_a0 <- 1/sqrt(tau_a0)
+```
+
+
+## Miscellaneous: Negative Binomial as Poisson-gamma mixture
+```{r, eval=FALSE}
+N[i] ~ dpois(lambda[i]*rho[i])
+rho[i] ~ dgamma(r, r)
+r ~ dgamma(0.1, 0.1)
+```

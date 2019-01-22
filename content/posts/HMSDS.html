@@ -1,0 +1,87 @@
+---
+title: "Farr, M.T., Green, D.S., Holekamp, K.E., Roloff, G.J., and Zipkin, E.F. (In Press) Multispecies hierarchical modeling reveals variable responses of African carnivores to management alternatives. Ecological Applications."
+date: "2019-01-20"
+draft: false
+output:
+  blogdown::html_page:
+    fig_caption: false
+---
+
+
+
+<div id="description" class="section level1">
+<h1>Description</h1>
+<p>This work was done with <a href="http://inr.oregonstate.edu/people/david-green">Dr. David Green</a>, the <a href="http://www.holekamplab.org/">Holekamp lab</a> along with <a href="https://www.afwelsite.com">Dr. Gary Roloff</a> to quantify the impact of anthropogenic disturbance and management alternatives on the carnivore community within the Masai Mara National Reserve (MMNR), Kenya. Carnivore communities in the Serengeti-Mara ecosystem, including the MMNR, are among the most diverse in the world, but human-wildlife conflict threatens the continuation of this community. To understand the impact of anthropogenic disturbance on the carnivore community, we compared two disparate management regions within the MMNR that are managed by separate entities. The Mara Triangle experiences minimal disturbance while the Talek region contains high frequency of human-wildlife conflict. Using a hierarchical multi-species distance sampling model we estimate the community wide and species-specific effects of the Talek region on carnivore abundance and compared species’ abundances and group sizes between regions.</p>
+</div>
+<div id="background" class="section level1">
+<h1>Background</h1>
+<p>This was my first project as a graduate student, but the idea for this research originated before I started at Michigan State University. My part in this project began when I visited MSU as a prospective student for the <a href="https://msu.edu/user/ezipkin/">Zipkin Quantitative Ecology Lab</a>. Elise (Dr. Zipkin) encouraged me to talk with members of her department where I met Dr. Kay Holekamp for the first time. At the time I was finishing a job as a field technician and looking for work. Coincidently, Kay was in need of a technician for her Mara Hyena Project. In less than a month I was on a plane headed to Nairobi, Kenya to begin an 8 month safari in the Masai Mara National Reserve.</p>
+<p><img src="/Projects/img/HMSDS_01.JPG" /></p>
+<p><img src="/Projects/img/HMSDS_02.JPG" /></p>
+<p>Prior to my departure, Elise and I discussed the possiblility of using long-term data from Kay’s project for my dissertation research. So while I was primarily working on Kay’s project (monitoring the behavioral ecology of spotted hyenas), I was also keeping my eyes open for a potential interesting research question. During my tenure there, nothing was more obvious than the intensity of human disturbance in the form of tourism and livestock grazing.</p>
+<p><img src="/Projects/img/HMSDS_03.jpg" alt="Cheetah surrounded by tourist vehicles (Photo credit: Matthew Farr)" /></p>
+<p><img src="/Projects/img/HMSDS_04.jpg" alt="Masai livestock (Photo credit: Chase O’Neil)" /></p>
+<p>Though the presence of disturbance was obvious, I was curious how wildlife were responding inside the Reserve. Upon my return to the States and start of graduate school at MSU, I talked about potential research ideas with David Green, who was a PhD student in Kay’s lab at the time. Dave had actually spent most of his PhD interested in the effects of human distrubance on widlife. He along with Kay and Dr. Gary Roloff had designed and conducted a distance sampling study between 2012 and 2014 to estimate the abundance of wildlife within the Reserve. Here are photos of a few carnivore species seen during surveys.</p>
+<p><img src="/Projects/img/HMSDS_05.jpg" alt="Lioness (Photo credit: David Green)" /></p>
+<p><img src="/Projects/img/HMSDS_06.jpg" alt="4 male lions (Photo credit: David Green)" /></p>
+<p><img src="/Projects/img/HMSDS_07.JPG" alt="Juvenile spotted hyena (Photo credit: Matthew Farr)" /></p>
+<p><img src="/Projects/img/HMSDS_08.JPG" alt="Adult hyena carrying a topi skull (Photo credit: Matthew Farr)" /></p>
+<p><img src="/Projects/img/HMSDS_09.JPG" alt="Black-backed jackal (Photo credit: Chase O’Neil)" /></p>
+<p><img src="/Projects/img/HMSDS_10.JPG" alt="Adult cheetah and 3 cubs (Photo credit: Matthew Farr)" /></p>
+<p><img src="/Projects/img/HMSDS_11.JPG" alt="Serval" /></p>
+<p>This was the beginning of a collaboration that took 3.5 more years to get published! Our main finding, unsurprisingly, was that passive managment of wildlife regulations (i.e., prevention of human disturbance) had a negative effect on the carnivore community. But, surprisingly, some species (e.g., spotted hyena, black-backed jackal) actually were more abundant in the presence of disturbance. A reduction in lion abundance due to conflicts with humans is allowing for hyenas and jackals to flourish in the absence of competition. Another hypothesis is that these 2 species are more easily adjusting/adapting to human activities. Either way, communities including this carnivore community often do not responding uniformly to humans or the environment, as such it is important to consider the entire community for either conservation or wildlife management.</p>
+<p>This was an extremely beneficial project for me as a new PhD student! Determination and persitance are what got this project done and a few technical pieces that I had to learn along the way. If you’re interested in the statistical side of this project, which I hope you are, keep reading below. And if not… stay tuned for future project blogs!</p>
+<p>Matthew Farr <a href="mailto:farrmat1@msu.edu">farrmat1@msu.edu</a></p>
+<p>To read the actual publication click <a href="link!">here</a>.</p>
+<p>To return to recent post click <a href="https://farrmt.github.io/Projects/">here</a>.</p>
+</div>
+<div id="modeling-breakdown" class="section level1">
+<h1>Modeling Breakdown</h1>
+<p>Most of my work for this paper was both estimating the abundance of multiple carnivore species and measuring the effect of management regimes (disturbed vs undisturbed) on the entire carnivore community. We based this off Sollmann et al. 2016.</p>
+<div id="component-1-binomial-poisson-mixture" class="section level2">
+<h2>Component 1: Binomial-Poisson Mixture</h2>
+<p>The first component of this model is a binomial-Poisson mixture:</p>
+<p><span class="math display">\[n_{t,j,s} \sim Binomial(N_{t,j,s}, p_{t,j,s})\]</span> <span class="math display">\[N_{t,j,s} \sim Poisson(\lambda_{t,j,s})\]</span> <span class="math inline">\(n_{t,j,s}\)</span> is the recorded number of groups (for non-solitary species; more on this later) or counts (solitary species) during replicate <span class="math inline">\(t\)</span> of transect <span class="math inline">\(j\)</span> for species <span class="math inline">\(s\)</span>. This is data! <span class="math inline">\(N_{t,j,s}\)</span> is the latent number of groups (non-solitary) or abundance (solitary), <span class="math inline">\(p_{t,j,s}\)</span> is detection probability, and <span class="math inline">\(\lambda_{t,j,s}\)</span> is the expected number of groups (non-solitary) or abundance (solitary).</p>
+<p>Here is the code:</p>
+<pre class="r"><code>n[t,j,s] ~ dbin(N[t,j,s], pcap[t,j,s])
+N[t,j,s] ~ dpois(lambda[t,j,s])</code></pre>
+<p>The binomial part of this mixture is to link what we see/observe in the field to the actual biological process by accounting for imperfect detection. The second part of the mixture is accounting for stochasticity in latent abundance (or number of groups) by describing it as a random Poisson variable.</p>
+</div>
+<div id="component-2-imperfect-detection-distance-sampling" class="section level2">
+<h2>Component 2: Imperfect Detection &amp; Distance Sampling</h2>
+<p>This first component is similar to an N-mixture model, but instead of detection probability being estimated from repeated surveys, it is estimated by a detection function using recorded distances. A variety of detection functions exist (see Buckland et al. 1993), but they all have one trait in common, which is that detection probability descreases as a function of distance from the transect.</p>
+<p>FIGURE</p>
+<p>To calculate detection probability you integrate the detection function to find the area under the curve; however, we approximate this integral using distance bins…</p>
+<p><span class="math display">\[y_{t,j,s} \sim Multinomial(n_{t,j,s}, \pi^c_{t,j,s})\]</span> JAGS does not allow for latent variable as a parameter of the multinomial distribution. Must use categorical distribution. See Royle</p>
+<pre class="r"><code>dclass[i] ~ dcat(fc[1:nD, rep[i], site[i], spec[i]])</code></pre>
+<pre class="r"><code>g[k,t,j,s] &lt;- exp(-mdpt[k]*mdpt[k]/(2*sigma[j,s]*sigma[j,s]))
+pi[k,t,j,s] &lt;- v/B
+f[k,t,j,s] &lt;- g[k,t,j,s] * pi[k,t,j,s]
+fc[k,t,j,s] &lt;- f[k,t,j,s]/pcap[t,j,s]
+
+pcap[t,j,s] &lt;- sum(f[1:nD,t,j,s])</code></pre>
+<p>Detection probability is derived. Sigma is estimated. Data is midpoints, y, n.</p>
+</div>
+<div id="component-3-group-size" class="section level2">
+<h2>Component 3: Group Size</h2>
+<pre class="r"><code>gs[i] ~ dpois(gs.lambda[s.rep[i], s.site[i], s.spec[i]]) T(1,)</code></pre>
+</div>
+<div id="component-4-linear-predictors" class="section level2">
+<h2>Component 4: Linear Predictors</h2>
+<pre class="r"><code>lambda[t,j,s] &lt;- exp(alpha0[s] + ...)</code></pre>
+</div>
+<div id="component-5-community-hyper-distributions" class="section level2">
+<h2>Component 5: Community Hyper-distributions</h2>
+<pre class="r"><code>alpha0[s] ~ dnorm(mu_a0, tau_a0)
+
+mu_a0 ~ dnorm(0, 0.01)
+tau_a0 ~ dgamma(0.1, 0.1)
+sig_a0 &lt;- 1/sqrt(tau_a0)</code></pre>
+</div>
+<div id="miscellaneous-negative-binomial-as-poisson-gamma-mixture" class="section level2">
+<h2>Miscellaneous: Negative Binomial as Poisson-gamma mixture</h2>
+<pre class="r"><code>N[i] ~ dpois(lambda[i]*rho[i])
+rho[i] ~ dgamma(r, r)
+r ~ dgamma(0.1, 0.1)</code></pre>
+</div>
+</div>

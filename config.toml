@@ -1,6 +1,6 @@
 baseURL = "https://farrmt.github.io/Projects/"
 languageCode = "en-us"
-title = "Matthew Farr Projects"
+title = "Projects"
 theme = "hugo-theme-one"
 favicon = "img/favicon.ico"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
