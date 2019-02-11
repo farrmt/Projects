@@ -127,6 +127,7 @@ window.onload = ready;
 <div id="modeling-breakdown" class="section level1">
 <h1>Modeling Breakdown</h1>
 <p>Most of my work for this paper was both estimating the abundance of multiple carnivore species and measuring the effect of management regimes (disturbed vs undisturbed) on the entire carnivore community. We based this off Sollmann et al. 2016.</p>
+<p>We used JAGS (Just Another Gibbs Sampler; Plummer 2004) to estimate parameters.</p>
 <div id="component-1-binomial-poisson-mixture" class="section level2">
 <h2>Component 1: Binomial-Poisson Mixture</h2>
 <p>The first component of this model is a binomial-Poisson mixture:</p>
@@ -139,39 +140,58 @@ N[t,j,s] ~ dpois(lambda[t,j,s])</code></pre>
 <div id="component-2-imperfect-detection-distance-sampling" class="section level2">
 <h2>Component 2: Imperfect Detection &amp; Distance Sampling</h2>
 <p>This first component is similar to an N-mixture model, but instead of detection probability being estimated from repeated surveys, it is estimated by a detection function using recorded distances. A variety of detection functions exist (see Buckland et al. 1993), but they all have one trait in common, which is that detection probability descreases as a function of distance from the transect.</p>
-<p>FIGURE</p>
-<p>To calculate detection probability you integrate the detection function to find the area under the curve; however, we approximate this integral using distance bins…</p>
-<p><span class="math display">\[y_{t,j,s} \sim Multinomial(n_{t,j,s}, \pi^c_{t,j,s})\]</span> JAGS does not allow for latent variable as a parameter of the multinomial distribution. Must use categorical distribution. See Royle</p>
-<pre class="r"><code>dclass[i] ~ dcat(fc[1:nD, rep[i], site[i], spec[i]])</code></pre>
+<p><img src="/Projects/posts/HMSDS_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>To calculate detection probability you integrate the detection function to find the area under the curve.</p>
+<p><img src="/Projects/posts/HMSDS_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>However, we find it more convenient to approximate this integral using distance bins (i.e., multiple rectangles).</p>
+<p><img src="/Projects/posts/HMSDS_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>We can then sum up the areas of these rectangles to approximate the area under the curve. The code for this look like:</p>
 <pre class="r"><code>g[k,t,j,s] &lt;- exp(-mdpt[k]*mdpt[k]/(2*sigma[j,s]*sigma[j,s]))
 pi[k,t,j,s] &lt;- v/B
-f[k,t,j,s] &lt;- g[k,t,j,s] * pi[k,t,j,s]
-fc[k,t,j,s] &lt;- f[k,t,j,s]/pcap[t,j,s]
-
-pcap[t,j,s] &lt;- sum(f[1:nD,t,j,s])</code></pre>
-<p>Detection probability is derived. Sigma is estimated. Data is midpoints, y, n.</p>
+f[k,t,j,s] &lt;- g[k,t,j,s] * pi[k,t,j,s]</code></pre>
+<p>Here <code>g</code> is the height of each rectangle <code>k</code> (<code>t</code> = rep, <code>j</code> = site, <code>s</code> = species) and <code>pi</code> is the width of each rectangle. <code>mdpt[k]</code> is the distance at the midpoint of each class, which is data. <code>sigma</code> is the scale parameter of the half-normal distribution, which we are trying to estimate. <code>v</code> is the length of each distance class (the same for each of the distance classes in our case). <code>B</code> is the transect half-width. We can then sum <code>f</code> up as follows:</p>
+<pre class="r"><code>pcap[t,j,s] &lt;- sum(f[1:nD,t,j,s])</code></pre>
+<p>We now need to link these rectangles to our model to be able to estimate them. We do that by splitting our observations, <span class="math inline">\(n_{t,j,s}\)</span>, into each distance class <span class="math inline">\(k\)</span> giving us <span class="math inline">\(y_{k,t,j,s}\)</span>. The vector of observation across distance classes, <span class="math inline">\(\mathbf{y_{t,j,s}}\)</span>, is the realization of a multinomial distribution: <span class="math display">\[\mathbf{y_{t,j,s}} \sim Multinomial(n_{t,j,s}, \mathbf{\pi^c_{t,j,s}})\]</span> <span class="math inline">\(\mathbf{\pi^c_{t,j,s}})\)</span> is the vector of detection probabilities at each distance class (not the same pi as above in the code). The key here is that <span class="math inline">\(\mathbf{y_{t,j,s}}\)</span> and <span class="math inline">\(n_{t,j,s}\)</span> are data, so we can easily estimate <span class="math inline">\(\mathbf{\pi^c_{t,j,s}})\)</span>.</p>
+<p>JAGS does not allow for latent variable as a parameter of the multinomial distribution, so we use the categorical distribution (See XX Royle). The code for this look like:</p>
+<pre class="r"><code>dclass[i] ~ dcat(fc[1:nD, rep[i], site[i], spec[i]])</code></pre>
+<p>This links the distance for each observation to the conditional detection probability, <code>fc</code>. <code>fc</code> is the area of the rectanlge divided by the total area under the curve:</p>
+<pre class="r"><code>fc[k,t,j,s] &lt;- f[k,t,j,s]/pcap[t,j,s]</code></pre>
 </div>
 <div id="component-3-group-size" class="section level2">
 <h2>Component 3: Group Size</h2>
+<p>The next component of our model is for group sizes. Often we see individuals of a certain species within a group. These observations violate the assumption of independence. Thus we aggregate these observation by referring them as a group with a group size greater than 1. We can then model the group sizes separately to estimate an average group size and mulitply it by the number of groups to derive abundance. The code for group sizes is:</p>
 <pre class="r"><code>gs[i] ~ dpois(gs.lambda[s.rep[i], s.site[i], s.spec[i]]) T(1,)</code></pre>
+<p><code>gs[i]</code> is the observed group size for a specific observation. We then connect this to the replicate, site, and species. <code>gs.lambda</code> is the average group size for a specific replicate, site, and species.</p>
 </div>
 <div id="component-4-linear-predictors" class="section level2">
 <h2>Component 4: Linear Predictors</h2>
+<p>We now have the basic distance sampling structure and can move on to estimating variation in expected abundance (or number of groups). We use the log-link function and a linear predictor made up of covariates explaining variation in abundance.</p>
 <pre class="r"><code>lambda[t,j,s] &lt;- exp(alpha0[s] + ...)</code></pre>
+<p>We can also model variation in group size:</p>
+<pre class="r"><code>gs.lambda[t,j,s] &lt;- exp(beta0[s] + ...)</code></pre>
+<p>Or detection probability:</p>
+<pre class="r"><code>sigma[j,s] &lt;- exp(gamma0[s] + ...)</code></pre>
 </div>
 <div id="component-5-community-hyper-distributions" class="section level2">
 <h2>Component 5: Community Hyper-distributions</h2>
+<p>To make this a multi-species model, we link parameters within each of the linear predictors above using a random effect by species. We allow for each parameter to have a common or community hyper-distribuiton with corresponding hyper-parameters (e.g., <span class="math inline">\(\alpha0_s \sim Normal(\mu_{\alpha0}, \sigma_{\alpha0}^2)\)</span>). Using <code>alpha0</code> as an example we code this as:</p>
 <pre class="r"><code>alpha0[s] ~ dnorm(mu_a0, tau_a0)
 
 mu_a0 ~ dnorm(0, 0.01)
 tau_a0 ~ dgamma(0.1, 0.1)
 sig_a0 &lt;- 1/sqrt(tau_a0)</code></pre>
+<p>This allows information between species to be shared, but we still have species-specific estimates of each parameter.</p>
 </div>
 <div id="miscellaneous-negative-binomial-as-poisson-gamma-mixture" class="section level2">
 <h2>Miscellaneous: Negative Binomial as Poisson-gamma mixture</h2>
+<p>A miscellaneous topic that I would like to address is the specificiation of the negative binomial as a Poisson-gamma mixture. We first used a negative binomial for both abundance/number of groups and group size to account for overdispersion. We use a Poisson-gamma mixture, which is a <a href="https://en.wikipedia.org/wiki/Negative_binomial_distribution#Gamma–Poisson_mixture">alternate specification</a> of the negative binomial. JAGS built-in <code>dnegbin</code> uses the classic specification, but the Poisson-gamma mixture is more convenient for our use. The code for this is:</p>
 <pre class="r"><code>N[i] ~ dpois(lambda[i]*rho[i])
 rho[i] ~ dgamma(r, r)
 r ~ dgamma(0.1, 0.1)</code></pre>
+<p><code>rho[i]</code> is our dispersion parameter, which is the realization of a gamma distribution. For more information see Greene (2008) or <a href="https://sourceforge.net/p/mcmc-jags/discussion/610037/thread/31ae7acb/">this forum</a> on sourceforge.net.</p>
+<div id="literature-cited" class="section level3">
+<h3>Literature Cited</h3>
+</div>
 </div>
 </div>
 
